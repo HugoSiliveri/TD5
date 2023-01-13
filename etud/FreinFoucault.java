@@ -1,24 +1,25 @@
 package etud;
 
 /** Représente des freins à courant de foucault */
-public class FreinFoucault {
+public class FreinFoucault extends VoitureMontee{
 
 	/** Décore une voiture avec des freins à disque */
-	public FreinFoucault( ) {
+	public FreinFoucault(Voiture v) {
+		super(v);
 	}
 
+	@Override
 	public float getPrix() {
-		return 500;
-
+		return super.getPrix() + 50;
 	}
 
+	@Override
 	public float getMasse() {
-		return 2;
-
+		return super.getMasse() + 30;
 	}
 
-	public float getCoeffFreinageProp() {
-		return 0.5f;
-
+	@Override
+	public float getFreinage() {
+		return super.getFreinage() + 0.99f;
 	}
 }

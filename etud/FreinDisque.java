@@ -1,27 +1,24 @@
 package etud;
 /** Représente des freins à disque */
-public class FreinDisque   {
+public class FreinDisque extends VoitureMontee{
 
-  /** Décore une voiture avec des freins à disque */
-  public FreinDisque() {
-  }
+    /** Décore une voiture avec des freins à disque */
+    public FreinDisque(Voiture v) {
+        super(v);
+    }
 
-  
-  public float getPrix() {
- return 150;
-  }
+    @Override
+    public float getPrix() {
+        return super.getPrix() + 20;
+    }
 
-  
-  public float getMasse() {
-   return 3;
-	   
+    @Override
+    public float getMasse() {
+        return super.getMasse() + 10;
+    }
 
-  }
-
-  
-  public float getForceFreinageCst() {
-   return 7.95f; // Pour obtenir une distance de freinage cohérente avec la réalité
-	  
-
-  }
+    @Override
+    public float getFreinage() {
+        return super.getFreinage() + 0.7f;
+    }
 }

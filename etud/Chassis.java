@@ -1,6 +1,7 @@
 package etud;
 /** Représente le chassis d'une voiture. Classe de base à décorer... */
-public class Chassis implements Voiture {
+public abstract class Chassis implements Voiture {
+
 	@Override
 	public float getMasse() {
 		return 700;
@@ -36,6 +37,16 @@ public class Chassis implements Voiture {
 	@Override
 	public float getRayonRoues() {
 		return 0.3f; // 14*0.0127f; // 14 pouces de diamètre
+	}
+
+	@Override
+	public float getAcceleration() {
+		return 0.16f;
+	}
+
+	@Override
+	public float getFreinage() {
+		return 0.20f;
 	}
 
 	@Override

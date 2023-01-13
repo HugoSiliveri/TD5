@@ -56,8 +56,13 @@ public class BancDeTest {
 
 	public static void main(String[] args) {
 		BancDeTest tests = new BancDeTest();
-		Voiture voiture;
-		
+
+		Voiture voiture = new VoitureMoteurDiesel(new FreinDisque(new AdaptateurChassis(new ChassisAnglais())));
+		System.out.println("prix = "+ voiture.getPrix());
+		System.out.println("masse = "+ voiture.getMasse());
+		System.out.println("acceleration = " + voiture.getAcceleration());
+		System.out.println("freinage = " + voiture.getFreinage());
+		System.out.println(voiture);
 		// TODO: CONSTRUISEZ et AJOUTER des voitures
 		
 		LinkedList<Fiche> resultats = tests.lancerTests();

@@ -58,4 +58,7 @@ public interface Voiture {
 	 */
 	float getRayonRoues();
 
+	float getAcceleration();
+
+	float getFreinage();
 }
